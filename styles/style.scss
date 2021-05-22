@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$color-orange: hsl(31, 77%, 52%);
+$color-cyan: hsl(184, 100%, 22%);
+$color-cyan-dark: hsl(179, 100%, 13%);
+$color-white-transparent: hsla(0, 0%, 100%, 0.75);
+$color-gray: hsl(0, 0%, 95%);
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  color: $color-white-transparent;
+  line-height: 1.8;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Big Shoulders Display", cursive;
+  color: $color-gray;
+}
+h1 {
+  text-transform: uppercase;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  margin: 10px;
+  border-radius: 10px;
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.card {
+  width: 325px;
+  padding: 45px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .card-img {
+    width: 60px;
+  }
+  .card-footer {
+    margin-top: 2rem;
+  }
+}
+.bg-orange {
+  background-color: $color-orange;
+}
+.bg-cyan {
+  background-color: $color-cyan;
+}
+.bg-cyan-dark {
+  background-color: $color-cyan-dark;
+}
+.btn {
+  border: none;
+  outline: none;
+  background-color: $color-gray;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid $color-gray;
+  color: $color-gray;
+}
+.btn-orange {
+  color: $color-orange;
+}
+.btn-cyan {
+  color: $color-cyan;
+}
+.btn-cyan-dark {
+  color: $color-cyan-dark;
+}
